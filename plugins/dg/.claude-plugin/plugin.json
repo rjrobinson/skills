@@ -1,0 +1,9 @@
+{
+  "name": "dg",
+  "description": "Use when the user invokes /dg for an entertaining adversarial code review with Dinesh vs Gilfoyle banter from Silicon Valley",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

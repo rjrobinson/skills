@@ -1,0 +1,91 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rjrobinson-skills",
+  "description": "R.J. Robinson's personal library of Claude Code / Codex skills \u2014 one installable plugin per skill.",
+  "owner": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "create-adr",
+      "description": "Interactively facilitate writing a short Architecture Decision Record (ADR). Use when the user wants to make and document an upfront technical or architecture decision \u2014 capturing the problem, constraints, 2-3 realistic options with tradeoffs, the chosen decision and why, risks/consequences consciously accepted, and a concrete revisit trigger. Trigger on: /create-adr, \"create ADR\", \"write an ADR\", \"architecture decision record\", \"document this decision\", \"let's decide how to build X\".",
+      "source": "./plugins/create-adr",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "dg",
+      "description": "Use when the user invokes /dg for an entertaining adversarial code review with Dinesh vs Gilfoyle banter from Silicon Valley",
+      "source": "./plugins/dg",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "graphify",
+      "description": "any input (code, docs, papers, images) \u2192 knowledge graph \u2192 clustered communities \u2192 HTML + JSON + audit report",
+      "source": "./plugins/graphify",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "loop-builder",
+      "description": "Use when designing, structuring, or hardening a Claude Code /loop \u2014 i.e. the user wants a recurring/self-paced task to run safely and asks for help shaping it (\"help me set up a loop\", \"make this loop safe\", \"what should my loop prompt be\", \"turn this into a /loop\", \"design a loop that...\"). Forces the request through 7 ingredients before emitting a runnable /loop invocation. Do NOT use to merely execute an already-specified loop like `/loop 5m /foo` \u2014 that is the built-in /loop skill's job.",
+      "source": "./plugins/loop-builder",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "reap-worktrees",
+      "description": "Find git worktrees whose PR is already merged, then transition their Jira ticket and delete the worktree. Use when cleaning up finished worktrees / \"reap merged worktrees\" / \"any worktrees I can delete?\".",
+      "source": "./plugins/reap-worktrees",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "start",
+      "description": "Start the Trainual dev server. Auto-detects main repo vs worktree, uses per-worktree socket + Procfile to avoid collisions.",
+      "source": "./plugins/start",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "start-worktree",
+      "description": "Set up a repo-tailored git-worktree dev loop. Run ONCE in any repo to generate a /worktree command (creates an isolated, runnable worktree) and a /start command (boots that worktree's dev server). Detects the stack, confirms choices, writes both into .claude/commands/. Trigger on /start-worktree, \"set up worktrees for this repo\", \"wire up /worktree and /start\", \"make worktrees runnable here\".",
+      "source": "./plugins/start-worktree",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
+      "name": "worktree",
+      "description": "Create a runnable git worktree at ../<repo>-worktrees/<branch> with symlinked env, configs, and deps",
+      "source": "./plugins/worktree",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+#
+# skills — curate R.J. Robinson's personal skills marketplace.
+#
+#   bin/skills add [--from DIR]   fzf-pick skills from a source dir, copy them in
+#   bin/skills remove             fzf-pick installed skills to remove
+#   bin/skills list               list the skills currently in the marketplace
+#   bin/skills sync               regenerate all manifests from plugins/
+#
+# Source dir defaults to $CLAUDE_SKILLS_DIR or ~/.claude/skills. Selected skill
+# folders are COPIED into plugins/<name>/skills/<name>/ (the single source of
+# truth), then every manifest is regenerated. Nothing is committed for you.
+
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PLUGINS_DIR="$ROOT/plugins"
+DEFAULT_SRC="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
+
+RSYNC_EXCLUDES=(--exclude '.git' --exclude 'node_modules' --exclude '__pycache__'
+                --exclude '.venv' --exclude '.DS_Store' --exclude '*.pyc')
+
+die() { printf 'error: %s\n' "$*" >&2; exit 1; }
+have() { command -v "$1" >/dev/null 2>&1; }
+
+regen() { python3 "$ROOT/bin/generate_manifests.py"; }
+
+# Emit "name<TAB>path" for every skill dir (contains SKILL.md) under $1.
+candidates() {
+  local src="$1" f d
+  find "$src" -maxdepth 2 -name SKILL.md 2>/dev/null | while read -r f; do
+    d="$(dirname "$f")"
+    printf '%s\t%s\n' "$(basename "$d")" "$d"
+  done | sort -u
+}
+
+copy_skill() {  # <name> <src_path>
+  local name="$1" src="$2" dest="$PLUGINS_DIR/$1/skills/$1"
+  mkdir -p "$dest"
+  rsync -a --delete "${RSYNC_EXCLUDES[@]}" "$src"/ "$dest"/
+}
+
+cmd_add() {
+  local src="$DEFAULT_SRC"
+  if [[ "${1:-}" == "--from" ]]; then src="${2:-}"; [[ -d "$src" ]] || die "no such dir: $src"; fi
+  have fzf || die "fzf not found (brew install fzf), or add manually then run: bin/skills sync"
+  [[ -d "$src" ]] || die "source dir not found: $src"
+
+  local selection
+  selection="$(candidates "$src" | fzf --multi \
+      --delimiter='\t' --with-nth=1 \
+      --prompt='pick skills > ' \
+      --header='TAB=mark multiple · ENTER=confirm · preview on right' \
+      --preview='sed -n "1,60p" {2}/SKILL.md' \
+      --preview-window='right,60%,wrap')" || { echo "nothing selected."; return 0; }
+
+  [[ -n "$selection" ]] || { echo "nothing selected."; return 0; }
+
+  local count=0 name path
+  while IFS=$'\t' read -r name path; do
+    [[ -n "$name" ]] || continue
+    echo "  + $name"
+    copy_skill "$name" "$path"
+    count=$((count + 1))
+  done <<< "$selection"
+
+  echo "copied $count skill(s)."
+  regen
+}
+
+cmd_remove() {
+  have fzf || die "fzf not found; remove the plugins/<name> dir manually, then: bin/skills sync"
+  [[ -d "$PLUGINS_DIR" ]] || die "no plugins yet."
+  local selection
+  selection="$(find "$PLUGINS_DIR" -maxdepth 1 -mindepth 1 -type d 2>/dev/null \
+      | sort | sed "s#$PLUGINS_DIR/##" \
+      | fzf --multi --prompt='remove > ' --header='TAB=mark · ENTER=confirm')" \
+      || { echo "nothing selected."; return 0; }
+  [[ -n "$selection" ]] || { echo "nothing selected."; return 0; }
+  while read -r name; do
+    [[ -n "$name" ]] || continue
+    rm -rf "${PLUGINS_DIR:?}/$name"
+    echo "  - $name"
+  done <<< "$selection"
+  regen
+}
+
+cmd_list() {
+  [[ -d "$PLUGINS_DIR" ]] || { echo "no skills yet. run: bin/skills add"; return 0; }
+  local n=0
+  for d in "$PLUGINS_DIR"/*/; do
+    [[ -d "$d" ]] || continue
+    printf '  • %s\n' "$(basename "$d")"
+    n=$((n + 1))
+  done
+  echo "$n plugin(s) in the marketplace."
+}
+
+usage() {
+  sed -n '3,14p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
+}
+
+case "${1:-help}" in
+  add)          shift; cmd_add "$@" ;;
+  remove|rm)    cmd_remove ;;
+  list|ls)      cmd_list ;;
+  sync|generate|gen) regen ;;
+  help|-h|--help) usage ;;
+  *) usage; exit 1 ;;
+esac

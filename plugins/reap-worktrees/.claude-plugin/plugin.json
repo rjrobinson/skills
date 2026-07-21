@@ -1,0 +1,9 @@
+{
+  "name": "reap-worktrees",
+  "description": "Find git worktrees whose PR is already merged, then transition their Jira ticket and delete the worktree. Use when cleaning up finished worktrees / \"reap merged worktrees\" / \"any worktrees I can delete?\".",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

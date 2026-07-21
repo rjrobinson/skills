@@ -1,0 +1,9 @@
+{
+  "name": "create-adr",
+  "description": "Interactively facilitate writing a short Architecture Decision Record (ADR). Use when the user wants to make and document an upfront technical or architecture decision \u2014 capturing the problem, constraints, 2-3 realistic options with tradeoffs, the chosen decision and why, risks/consequences consciously accepted, and a concrete revisit trigger. Trigger on: /create-adr, \"create ADR\", \"write an ADR\", \"architecture decision record\", \"document this decision\", \"let's decide how to build X\".",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "worktree",
+  "description": "Create a runnable git worktree at ../<repo>-worktrees/<branch> with symlinked env, configs, and deps",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

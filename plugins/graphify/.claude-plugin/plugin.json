@@ -1,0 +1,9 @@
+{
+  "name": "graphify",
+  "description": "any input (code, docs, papers, images) \u2192 knowledge graph \u2192 clustered communities \u2192 HTML + JSON + audit report",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

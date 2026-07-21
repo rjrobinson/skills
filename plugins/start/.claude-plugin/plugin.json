@@ -1,0 +1,9 @@
+{
+  "name": "start",
+  "description": "Start the Trainual dev server. Auto-detects main repo vs worktree, uses per-worktree socket + Procfile to avoid collisions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

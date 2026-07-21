@@ -1,0 +1,9 @@
+{
+  "name": "loop-builder",
+  "description": "Use when designing, structuring, or hardening a Claude Code /loop \u2014 i.e. the user wants a recurring/self-paced task to run safely and asks for help shaping it (\"help me set up a loop\", \"make this loop safe\", \"what should my loop prompt be\", \"turn this into a /loop\", \"design a loop that...\"). Forces the request through 7 ingredients before emitting a runnable /loop invocation. Do NOT use to merely execute an already-specified loop like `/loop 5m /foo` \u2014 that is the built-in /loop skill's job.",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

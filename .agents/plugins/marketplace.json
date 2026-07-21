@@ -1,0 +1,104 @@
+{
+  "name": "rjrobinson-skills",
+  "interface": {
+    "displayName": "R.J. Robinson's Skills"
+  },
+  "plugins": [
+    {
+      "name": "create-adr",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/create-adr"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "dg",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/dg"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "graphify",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/graphify"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "loop-builder",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/loop-builder"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "reap-worktrees",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/reap-worktrees"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "start",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/start"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "start-worktree",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/start-worktree"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "worktree",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/worktree"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    }
+  ]
+}

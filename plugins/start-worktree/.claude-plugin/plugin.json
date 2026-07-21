@@ -1,0 +1,9 @@
+{
+  "name": "start-worktree",
+  "description": "Set up a repo-tailored git-worktree dev loop. Run ONCE in any repo to generate a /worktree command (creates an isolated, runnable worktree) and a /start command (boots that worktree's dev server). Detects the stack, confirms choices, writes both into .claude/commands/. Trigger on /start-worktree, \"set up worktrees for this repo\", \"wire up /worktree and /start\", \"make worktrees runnable here\".",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}
