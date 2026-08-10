@@ -14,6 +14,13 @@
       "skills": "./plugins/create-adr/skills/"
     },
     {
+      "name": "debrief",
+      "description": "Second brain for code changes, so the user owns a change instead of just having it merged \u2014 they can explain the problem, defend the solution, name the alternatives, and answer a skeptical senior engineer without the agent present. Two modes. Change mode: after-action review of work just done (read the real diff, explain in three layers, Mermaid diagrams, write the debrief doc, then flip roles and interview the user). Comment mode: work through PR review feedback until the claim is understood, its risk is triaged, and a decision is made together. Output always goes to the separate debrief repo, never into the project. Trigger on: /debrief, \"debrief this\", \"after-action review\", \"walk me through what we just did\", \"quiz me on this change\", \"help me own this PR\", \"I need to defend this in review\", \"what is this reviewer actually saying\", \"triage these comments\", \"work through this PR feedback\".",
+      "source": "./plugins/debrief",
+      "category": "general",
+      "skills": "./plugins/debrief/skills/"
+    },
+    {
       "name": "dg",
       "description": "Use when the user invokes /dg for an entertaining adversarial code review with Dinesh vs Gilfoyle banter from Silicon Valley",
       "source": "./plugins/dg",

@@ -17,6 +17,18 @@
       "category": "general"
     },
     {
+      "name": "debrief",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/debrief"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
       "name": "dg",
       "source": {
         "source": "directory",
