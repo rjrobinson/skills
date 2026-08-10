@@ -68,6 +68,16 @@
       }
     },
     {
+      "name": "response-standard",
+      "description": "A controlled-language standard for how an agent writes to one person, derived from ASD-STE100 and extended with per-person preferences for answer shape, depth, evidence, and tone. Ships the applied standard plus the interview that regenerates it for a different reader. Use when the user asks how you should talk to them, wants replies restyled, or wants to build their own response standard. Trigger on: /response-standard, /build-response-standard, \"how should you talk to me\", \"apply my response standard\", \"build my response standard\", \"simplified technical english\".",
+      "source": "./plugins/response-standard",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
       "name": "start",
       "description": "Start the Trainual dev server. Auto-detects main repo vs worktree, uses per-worktree socket + Procfile to avoid collisions.",
       "source": "./plugins/start",
