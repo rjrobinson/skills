@@ -1,0 +1,9 @@
+{
+  "name": "build-response-standard",
+  "description": "Interview a person about how they want an agent to write to them, then generate their Response Standard profile. Twenty questions across five sets, covering answer shape, depth, structure, evidence, tone, and forbidden constructs. Use when someone wants their own response standard, wants to change an existing one, or asks how to make an agent write the way they think. Trigger on: /build-response-standard, \"build my response standard\", \"how should you talk to me\", \"make your own standard for me\".",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}

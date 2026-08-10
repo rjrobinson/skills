@@ -8,6 +8,16 @@
   },
   "plugins": [
     {
+      "name": "build-response-standard",
+      "description": "Interview a person about how they want an agent to write to them, then generate their Response Standard profile. Twenty questions across five sets, covering answer shape, depth, structure, evidence, tone, and forbidden constructs. Use when someone wants their own response standard, wants to change an existing one, or asks how to make an agent write the way they think. Trigger on: /build-response-standard, \"build my response standard\", \"how should you talk to me\", \"make your own standard for me\".",
+      "source": "./plugins/build-response-standard",
+      "category": "general",
+      "author": {
+        "name": "R.J. Robinson",
+        "email": "robertj.robinson@gmail.com"
+      }
+    },
+    {
       "name": "create-adr",
       "description": "Interactively facilitate writing a short Architecture Decision Record (ADR). Use when the user wants to make and document an upfront technical or architecture decision \u2014 capturing the problem, constraints, 2-3 realistic options with tradeoffs, the chosen decision and why, risks/consequences consciously accepted, and a concrete revisit trigger. Trigger on: /create-adr, \"create ADR\", \"write an ADR\", \"architecture decision record\", \"document this decision\", \"let's decide how to build X\".",
       "source": "./plugins/create-adr",
@@ -69,7 +79,7 @@
     },
     {
       "name": "response-standard",
-      "description": "A controlled-language standard for how an agent writes to one person, derived from ASD-STE100 and extended with per-person preferences for answer shape, depth, evidence, and tone. Ships the applied standard plus the interview that regenerates it for a different reader. Use when the user asks how you should talk to them, wants replies restyled, or wants to build their own response standard. Trigger on: /response-standard, /build-response-standard, \"how should you talk to me\", \"apply my response standard\", \"build my response standard\", \"simplified technical english\".",
+      "description": "Write every reply in RJ's Response Standard, a controlled language derived from ASD-STE100. Use this skill whenever responding to ANY user message, including coding tasks, debugging, explanations, planning, reports, standups, commits, PR bodies, Jira tickets, agent briefs, and casual conversation. Verdict in the first line, evidence in the body, next actions last. Simplified Technical English grammar with full technical vocabulary. No time estimates, no filler, no empty praise, no em dashes. Trigger even on casual messages and even when the user did not ask for it. Trigger on: /response-standard, \"apply my response standard\", \"use simplified technical english\", \"restyle that\".",
       "source": "./plugins/response-standard",
       "category": "general",
       "author": {

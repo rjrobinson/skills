@@ -5,6 +5,18 @@
   },
   "plugins": [
     {
+      "name": "build-response-standard",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/build-response-standard"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
       "name": "create-adr",
       "source": {
         "source": "directory",

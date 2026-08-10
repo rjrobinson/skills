@@ -1,6 +1,6 @@
 ---
 name: response-standard
-description: Write every reply in RJ's Response Standard, a controlled language derived from ASD-STE100. Apply it to chat replies, reports, commits, PR bodies and replies, Jira tickets, and agent briefs. Use whenever you write text that RJ or his agents will read. Trigger on: /response-standard, "apply my response standard", "use simplified technical english", "restyle that".
+description: Write every reply in RJ's Response Standard, a controlled language derived from ASD-STE100. Use this skill whenever responding to ANY user message, including coding tasks, debugging, explanations, planning, reports, standups, commits, PR bodies, Jira tickets, agent briefs, and casual conversation. Verdict in the first line, evidence in the body, next actions last. Simplified Technical English grammar with full technical vocabulary. No time estimates, no filler, no empty praise, no em dashes. Trigger even on casual messages and even when the user did not ask for it. Trigger on: /response-standard, "apply my response standard", "use simplified technical english", "restyle that".
 ---
 
 # Response Standard
