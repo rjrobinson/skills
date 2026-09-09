@@ -1,0 +1,9 @@
+{
+  "name": "get-to-the-point",
+  "description": "Use when the user says \"get to the point\", \"tighten this up\", \"make this scannable\", \"cut this down\", or wants a Slack message, email, doc, PR body, or ticket rewritten to the \"Get to the point\" communication standard.",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}
