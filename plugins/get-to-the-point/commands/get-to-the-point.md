@@ -132,34 +132,36 @@ Instead of listing several months of support metrics, write:
 
 ## Output
 
-**Short sources.** When the source is under roughly 100 words, return the revision plus a single line covering the check, with no section headings. Three headed sections on a two-sentence message is more scaffolding than message.
+Return the revised text. Nothing else.
 
-Otherwise return:
+No preamble, no section headings, no list of what you changed, no scorecard. The revision is
+the deliverable. Someone who wanted commentary on the edit would have asked for a review, not
+a rewrite. Reporting on your own tidiness is the exact noise this standard exists to remove.
 
-### Revised
+Two exceptions, one line each, placed after the revision:
 
-Provide the strongest final version, ready to paste into Slack, a doc, or email.
+* **A gap in the source.** The revision needs something the source does not have: a number, a
+  name, an owner, the actual ask. State it and mark it `[TBD]`. Never invent it.
+* **A judgment call worth surfacing.** You cut something a reasonable person might have kept,
+  or the source had no clear point and you chose one. One sentence.
 
-### What you cut
+Silence means neither applies. Do not manufacture an exception to look thorough.
 
-Briefly list anything substantial you removed and why. Skip this section if the edits are obvious or minor.
+Do not add analysis, recommendations, facts, or assumptions that were not in the source text.
 
-### Check
+## Self-check
 
-Score each item as ✅ / ⚠️:
+Run this before returning. Fix whatever fails. Never print it.
 
 * Clear point
 * Conclusion first
 * Scannable
 * Only critical details
 * Concrete language
-* Plain language
+* Plain language, and the author's register preserved
 * No unnecessary repetition
 * Reader knows what to do next
-
-Every ⚠️ needs one line under the list naming what is missing and who supplies it. When the gap is in the source rather than the revision, say so and mark it `[TBD]`. A ⚠️ with no follow-up line is an incomplete review.
-
-Do not add new analysis, recommendations, facts, or assumptions that were not in the source text. If the source is missing a number or name the revision needs, mark it `[TBD]` rather than inventing it.
+* Nothing required by section 7 was dropped to hit the length target
 
 ## Rules
 
