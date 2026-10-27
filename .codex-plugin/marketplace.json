@@ -14,6 +14,13 @@
       "skills": "./plugins/build-response-standard/skills/"
     },
     {
+      "name": "commander",
+      "description": "Start or refresh the main-repo commander session. Builds the worktree fleet picture, reports status and pending decisions, then coordinates and delegates instead of implementing.",
+      "source": "./plugins/commander",
+      "category": "general",
+      "skills": "./plugins/commander/skills/"
+    },
+    {
       "name": "create-adr",
       "description": "Interactively facilitate writing a short Architecture Decision Record (ADR). Use when the user wants to make and document an upfront technical or architecture decision \u2014 capturing the problem, constraints, 2-3 realistic options with tradeoffs, the chosen decision and why, risks/consequences consciously accepted, and a concrete revisit trigger. Trigger on: /create-adr, \"create ADR\", \"write an ADR\", \"architecture decision record\", \"document this decision\", \"let's decide how to build X\".",
       "source": "./plugins/create-adr",
@@ -33,6 +40,13 @@
       "source": "./plugins/dg",
       "category": "general",
       "skills": "./plugins/dg/skills/"
+    },
+    {
+      "name": "get-to-the-point",
+      "description": "Use when the user says \"get to the point\", \"tighten this up\", \"make this scannable\", \"cut this down\", or wants a Slack message, email, doc, PR body, or ticket rewritten to the \"Get to the point\" communication standard.",
+      "source": "./plugins/get-to-the-point",
+      "category": "general",
+      "commands": "./plugins/get-to-the-point/commands/"
     },
     {
       "name": "graphify",

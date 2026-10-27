@@ -17,6 +17,18 @@
       "category": "general"
     },
     {
+      "name": "commander",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/commander"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
       "name": "create-adr",
       "source": {
         "source": "directory",
@@ -45,6 +57,18 @@
       "source": {
         "source": "directory",
         "path": "./plugins/dg"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "general"
+    },
+    {
+      "name": "get-to-the-point",
+      "source": {
+        "source": "directory",
+        "path": "./plugins/get-to-the-point"
       },
       "policy": {
         "installation": "AVAILABLE",

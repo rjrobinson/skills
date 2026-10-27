@@ -1,0 +1,9 @@
+{
+  "name": "commander",
+  "description": "Start or refresh the main-repo commander session. Builds the worktree fleet picture, reports status and pending decisions, then coordinates and delegates instead of implementing.",
+  "version": "0.1.0",
+  "author": {
+    "name": "R.J. Robinson",
+    "email": "robertj.robinson@gmail.com"
+  }
+}
